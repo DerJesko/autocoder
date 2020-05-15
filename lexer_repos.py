@@ -67,6 +67,6 @@ for root, dirs, files in os.walk(sys.argv[1]):
                 with open(output_directory + project + "." + str(hash_) + ".txt", "w") as f:
                     f.write(simp)
             except (UnicodeDecodeError):
-                print("UnicodeDecodeError:" + root + "/" + file)
+                print("UnicodeDecodeError: " + root + "/" + file)
 
 #print(' '.join(simp))
