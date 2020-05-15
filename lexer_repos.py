@@ -25,27 +25,27 @@ def simplify(s):
         elif tokentype in comment_tokens:
             stripped.append("comment")
         elif tokentype == Token.Literal.String.Char:
-            stripped.append("char")
+            stripped.append("charl") # char literal
         elif tokentype in string_tokens:
-            stripped.append("string")
+            stripped.append("stringl") # string literal
         elif tokentype == Token.Literal.Number.Float:
-            stripped.append("float")
+            stripped.append("floatl") # float literal
         elif tokentype in int_tokens:
             try:
-                if int(string) <= 20:
-                    stripped.append("integer" + str(int(string)))
+                if int(string) <= 100:
+                    stripped.append(str(int(string)))
                 else:
-                    stripped.append("integer")
+                    stripped.append("intl") # integer literal
             except:
-                stripped.append("integer")
+                stripped.append("intl")
         elif tokentype in var_tokens:
             if not (string in var_names):
                 var_names[string] = len(var_names)
             stripped.append("var" + str(var_names[string]))
         elif tokentype == Token.Literal.Number.Oct:
-            stripped.append("octal")
+            stripped.append("octall") # octal literal
         elif tokentype == Token.Error:
-            stripped.append("error")
+            stripped.append("errorl") # error instance
         elif tokentype == Token.Text:
             pass
         else:
