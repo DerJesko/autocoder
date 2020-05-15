@@ -13,7 +13,7 @@ urls = []
 for repo in repos:
     repo_name = repo["name"]
     url = repo["html_url"]
-    os.system("git clone " + url + " " + sys.argv[1] + repo_name)
+    os.system("git clone --depth=1 " + url + " " + sys.argv[1] + repo_name)
     urls.append(url)
 
 try:
