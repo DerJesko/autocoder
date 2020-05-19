@@ -7,7 +7,7 @@ license_ = "gpl-3.0"
 language = "C"
 repos = requests.get('https://api.github.com/search/repositories?q=language:'
                      + language + '+license:'+ license_ +
-                     '+stars:>1000').json()["items"]
+                     '+stars:>500&per_page=100&sort:stars').json()["items"]
 
 urls = []
 for repo in repos:

@@ -1,5 +1,6 @@
 venv
 .vscode
 data/modified/c/*
+data/modified/c_letters/*
 data/original/**
 .ipynb_checkpoints

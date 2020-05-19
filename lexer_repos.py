@@ -1,7 +1,6 @@
 import sys
 import os
 import chardet
-from hashlib import sha256
 from pygments.lexers import get_lexer_by_name
 from pygments.token import Token
 
